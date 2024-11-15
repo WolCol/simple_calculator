@@ -159,10 +159,9 @@ public class Calculator {
                 System.out.println("Enter number " + (i + 1) + ": ");
                 nums[i] = scanner.nextInt();
                 scanner.nextLine(); // konsumiert Zeilenumbruch
-                if(nums[i] == 0 && i != 0){
+                if (nums[i] == 0 && i != 0) {
                     System.out.println("You cannot divide by zero! Try again.");
-                }
-                else {
+                } else {
                     i++;
                 }
             }
