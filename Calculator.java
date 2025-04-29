@@ -52,23 +52,23 @@ public class Calculator {
     public void add() {
         // Findet heraus, wie viele Zahlen der Nutzer addieren möchte.
         System.out.println("How many items do you want to add? ");
-        int numOfItems = scanner.nextInt();
+        float numOfItems = scanner.nextFloat();
         scanner.nextLine(); // konsumiert Zeilenumbruch
 
         if (numOfItems > 1) {
             // Erstellt ein Array mit der Länge der Zahlen, die gewünscht waren und weist dann jeder Position eine Zahl nacheinander zu.
-            int i = 0;
-            int nums[] = new int[numOfItems];
+            float i = 0;
+            float nums[] = new float[(int) numOfItems];
             while (i < numOfItems) {
                 System.out.println("Enter number " + (i + 1) + ": ");
-                nums[i] = scanner.nextInt();
+                nums[(int) i] = scanner.nextFloat();
                 scanner.nextLine(); // konsumiert Zeilenumbruch
                 i++;
             }
 
             // Zählt alle Zahlen im Array zusammen.
-            int sum = 0;
-            for (int j : nums) {
+            float sum = 0;
+            for (float j : nums) {
                 sum += j;
             }
 
@@ -83,31 +83,31 @@ public class Calculator {
     public void subtract(){
         // Findet heraus, wie viele Zahlen der Nutzer subtrahieren möchte.
         System.out.println("How many items do you want to subtract? ");
-        int numOfItems = scanner.nextInt();
+        float numOfItems = scanner.nextFloat();
         scanner.nextLine(); // konsumiert Zeilenumbruch
 
         if (numOfItems > 1) {
             // Erstellt ein Array mit der Länge der Zahlen, die gewünscht waren und weist dann jeder Position eine Zahl nacheinander zu.
-            int i = 0;
-            int nums[] = new int[numOfItems];
+            float i = 0;
+            float nums[] = new float[(int) numOfItems];
             while (i < numOfItems) {
                 System.out.println("Enter number " + (i + 1) + ": ");
-                nums[i] = scanner.nextInt();
+                nums[(int) i] = scanner.nextFloat();
                 scanner.nextLine(); // konsumiert Zeilenumbruch
                 i++;
             }
 
             // Zieht alle Zahlen von der ersten ab.
-            int firstNum = nums[0];
-            int sumOtherNums = 0;
-            int index = 0;
-            for (int j : nums) {
+            float firstNum = nums[0];
+            float sumOtherNums = 0;
+            float index = 0;
+            for (float j : nums) {
                 if (index++ == 0) {       //im ersten Durchlauf ist index == 0 true und die Summe wird durch continue nicht erhöht → erste Zahl wird übersprungen
                     continue;
                 }
                     sumOtherNums += j;
             }
-            int solution = firstNum - sumOtherNums;
+            float solution = firstNum - sumOtherNums;
 
             //Zeigt dem Nutzer die Differenz an.
             System.out.println("The solution is: " + solution);
@@ -119,22 +119,22 @@ public class Calculator {
     public void multiply() {
         // Findet heraus, wie viele Zahlen der Nutzer multiplizieren möchte.
         System.out.println("How many items do you want to multiply? ");
-        int numOfItems = scanner.nextInt();
+        float numOfItems = scanner.nextFloat();
         scanner.nextLine();
         if (numOfItems > 1) {
             // Erstellt ein Array mit der Länge der Zahlen, die gewünscht waren und weist dann jeder Position eine Zahl nacheinander zu.
-            int i = 0;
-            int nums[] = new int[numOfItems];
+            float i = 0;
+            float nums[] = new float[(int) numOfItems];
             while (i < numOfItems) {
                 System.out.println("Enter number " + (i + 1) + ": ");
-                nums[i] = scanner.nextInt();
+                nums[(int) i] = scanner.nextFloat();
                 scanner.nextLine(); // konsumiert Zeilenumbruch
                 i++;
             }
 
             // Multipliziert alle Zahlen miteinander
-            int product = 1;
-            for (int j : nums) {
+            float product = 1;
+            for (float j : nums) {
                 product *= j;
             }
 
@@ -148,18 +148,18 @@ public class Calculator {
     public void divide(){
         // Findet heraus, wie viele Zahlen der Nutzer dividieren möchte.
         System.out.println("How many items do you want to divide? ");
-        int numOfItems = scanner.nextInt();
+        float numOfItems = scanner.nextFloat();
         scanner.nextLine(); // konsumiert Zeilenumbruch
 
         if (numOfItems > 1) {
             // Erstellt ein Array mit der Länge der Zahlen, die gewünscht waren und weist dann jeder Position eine Zahl nacheinander zu.
-            int i = 0;
-            int nums[] = new int[numOfItems];
+            float i = 0;
+            float nums[] = new float[(int) numOfItems];
             while (i < numOfItems) {
                 System.out.println("Enter number " + (i + 1) + ": ");
-                nums[i] = scanner.nextInt();
+                nums[(int) i] = scanner.nextFloat();
                 scanner.nextLine(); // konsumiert Zeilenumbruch
-                if (nums[i] == 0 && i != 0) {
+                if (nums[(int) i] == 0 && i != 0) {
                     System.out.println("You cannot divide by zero! Try again.");
                 } else {
                     i++;
@@ -168,8 +168,8 @@ public class Calculator {
 
             // Dividiert alle Zahlen miteinander
             double quotient = nums[0];
-            int index = 0;
-            for (int j : nums) {
+            float index = 0;
+            for (float j : nums) {
                 if (index++ == 0) {       //im ersten Durchlauf ist index == 0 true und die Summe wird durch continue nicht erhöht → erste Zahl wird übersprungen
                     continue;
                 }
